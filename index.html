@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainWave AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <i class="fas fa-brain"></i> BrainWave AI
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#materials">Materials</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+        <div class="hero-badge">🤖 Powered by IBM Watson AI</div>
+        <h1>Learn Smarter with <span class="gradient-text">BrainWave AI</span></h1>
+        <p>Your intelligent academic companion for engineering students. Get instant answers, explore courses, and ace your exams with the power of AI.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('courses')">
+                <i class="fas fa-rocket"></i> Explore Courses
+            </button>
+            <button class="btn btn-outline" onclick="scrollToSection('features')">
+                <i class="fas fa-play-circle"></i> Learn More
+            </button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>6+</h3>
+                <p>Courses</p>
+            </div>
+            <div class="stat">
+                <h3>AI</h3>
+                <p>Powered</p>
+            </div>
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Support</p>
+            </div>
+        </div>
+    </div>
+    <div class="hero-illustration">
+        <div class="floating-card card-1">
+            <i class="fas fa-brain"></i>
+            <span>AI Chatbot</span>
+        </div>
+        <div class="floating-card card-2">
+            <i class="fas fa-book-open"></i>
+            <span>Smart Notes</span>
+        </div>
+        <div class="floating-card card-3">
+            <i class="fas fa-chart-line"></i>
+            <span>Track Progress</span>
+        </div>
+    </div>
+</section>
+
+<!-- COURSES SECTION -->
+<section id="courses" class="courses-section">
+    <div class="section-header">
+        <span class="section-tag">📚 Our Courses</span>
+        <h2>Explore Engineering Subjects</h2>
+        <p>Comprehensive study materials and AI-powered assistance for each subject</p>
+    </div>
+    <div class="courses-grid">
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h3>CAD</h3>
+            <p>Master 2D & 3D design with AutoCAD fundamentals, drawing commands, and rendering.</p>
+            <div class="course-tags">
+                <span>2D Drawing</span>
+                <span>3D Modeling</span>
+                <span>Rendering</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('cad')">View Syllabus →</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Cloud Computing</h3>
+            <p>Understand cloud architecture, service models, deployment, and DevOps basics.</p>
+            <div class="course-tags">
+                <span>IaaS/PaaS/SaaS</span>
+                <span>AWS</span>
+                <span>DevOps</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('cloud')">View Syllabus →</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Data Structures</h3>
+            <p>Learn arrays, linked lists, trees, graphs, and algorithm complexity analysis.</p>
+            <div class="course-tags">
+                <span>Arrays</span>
+                <span>Trees</span>
+                <span>Graphs</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('dsa')">View Syllabus →</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                <i class="fas fa-desktop"></i>
+            </div>
+            <h3>Operating System</h3>
+            <p>Study process management, memory management, file systems, and deadlocks.</p>
+            <div class="course-tags">
+                <span>Processes</span>
+                <span>Memory</span>
+                <span>Scheduling</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('os')">View Syllabus →</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                <i class="fas fa-infinity"></i>
+            </div>
+            <h3>Theory of Computation</h3>
+            <p>Explore automata theory, regular expressions, CFG, and Turing machines.</p>
+            <div class="course-tags">
+                <span>DFA/NFA</span>
+                <span>CFG</span>
+                <span>Turing Machine</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('toc')">View Syllabus →</button>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3>DBMS</h3>
+            <p>Learn database design, SQL queries, normalization, and transaction management.</p>
+            <div class="course-tags">
+                <span>SQL</span>
+                <span>Normalization</span>
+                <span>ER Model</span>
+            </div>
+            <button class="btn btn-card" onclick="openSyllabus('dbms')">View Syllabus →</button>
+        </div>
+    </div>
+</section>
+
+<!-- SYLLABUS MODAL -->
+<div class="modal-overlay" id="syllabusModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<!-- STUDY MATERIALS SECTION -->
+<section id="materials" class="materials-section">
+    <div class="section-header">
+        <span class="section-tag">📖 Study Materials</span>
+        <h2>Resources to Boost Your Learning</h2>
+        <p>Access notes, previous year questions, and video lectures</p>
+    </div>
+    <div class="materials-grid">
+        <div class="material-card">
+            <div class="material-icon">
+                <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3>PDF Notes</h3>
+            <p>Comprehensive handwritten and typed notes for every subject.</p>
+            <a href="#" class="material-link">Browse Notes <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="material-card">
+            <div class="material-icon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Previous Year Papers</h3>
+            <p>Solved and unsolved PYQs to practice before exams.</p>
+            <a href="#" class="material-link">View Papers <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="material-card">
+            <div class="material-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <h3>Video Lectures</h3>
+            <p>Curated video lectures from top educators and NPTEL.</p>
+            <a href="#" class="material-link">Watch Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="material-card">
+            <div class="material-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI Doubt Solver</h3>
+            <p>Ask any academic question to our BrainWave AI chatbot instantly.</p>
+            <a href="#" class="material-link">Ask AI <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="features-section">
+    <div class="section-header">
+        <span class="section-tag">⚡ Features</span>
+        <h2>Why Choose BrainWave AI?</h2>
+        <p>Built with cutting-edge AI to transform your learning experience</p>
+    </div>
+    <div class="features-grid">
+        <div class="feature-item">
+            <div class="feature-number">01</div>
+            <h3>Watson AI Chatbot</h3>
+            <p>Get instant answers to your academic doubts powered by IBM Watson Assistant with generative AI capabilities.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-number">02</div>
+            <h3>WhatsApp Support</h3>
+            <p>Connect with our support team directly through WhatsApp for personalized academic guidance.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-number">03</div>
+            <h3>Smart Syllabus Guide</h3>
+            <p>Interactive syllabus breakdown for every subject with topic-wise organization and resources.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-number">04</div>
+            <h3>Exam Preparation</h3>
+            <p>AI-driven exam tips, important questions prediction, and personalized study plans.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+    <div class="section-header">
+        <span class="section-tag">💬 Student Reviews</span>
+        <h2>What Students Say</h2>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"BrainWave AI helped me understand cloud computing concepts in minutes. Amazing tool!"</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">R</div>
+                <div>
+                    <strong>Rahul K.</strong>
+                    <span>BTech CSE, 4th Sem</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Found all my CAD notes and PYQs in one place. Saved so much time before exams!"</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">P</div>
+                <div>
+                    <strong>Priya S.</strong>
+                    <span>BTech ME, 3rd Sem</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The WhatsApp support is quick and helpful. Best academic assistant platform!"</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">A</div>
+                <div>
+                    <strong>Amit V.</strong>
+                    <span>BTech IT, 4th Sem</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <span class="section-tag">📞 Get in Touch</span>
+            <h2>Need Help? We're Here!</h2>
+            <p>Reach out via WhatsApp or use our BrainWave AI chatbot for instant support.</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p>Chat with us instantly</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <strong>AI Chatbot</strong>
+                        <p>Available 24/7</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p>support@brainwaveai.com</p>
+                    </div>
+                </div>
+            </div>
+            <a class="whatsapp-btn" href="https://wa.me/919876543210" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <select>
+                    <option>Select Subject</option>
+                    <option>CAD</option>
+                    <option>Cloud Computing</option>
+                    <option>Data Structures</option>
+                    <option>Operating System</option>
+                    <option>Theory of Computation</option>
+                    <option>DBMS</option>
+                </select>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3><i class="fas fa-brain"></i> BrainWave AI</h3>
+            <p>Your AI-powered academic companion for engineering excellence.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#materials">Materials</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+            <h4>Subjects</h4>
+            <a href="#">CAD</a>
+            <a href="#">Cloud Computing</a>
+            <a href="#">Data Structures</a>
+            <a href="#">DBMS</a>
+        </div>
+        <div class="footer-links">
+            <h4>Connect</h4>
+            <a href="https://wa.me/919876543210" target="_blank">WhatsApp</a>
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 BrainWave AI | Powered by IBM Watson | Made with ❤️</p>
+    </div>
+</footer>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+
+<!-- WATSON ASSISTANT -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "b933465b-9a48-4b88-84f7-01c22a693ec1", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "f36a04e4-9d3c-483d-95c2-b3c1d036aa8f", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
